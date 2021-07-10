@@ -1,1 +1,1 @@
-# RPCT-package
+# pyrpct
