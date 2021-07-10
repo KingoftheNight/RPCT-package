@@ -1,24 +1,24 @@
 from setuptools import setup
 from irap.__init__ import __version__
 
-setup(name='irap',
+setup(name='pyrpct',
     version=__version__,
     description='an intelligent protein analysis toolkit based on raac and pssm ',
-    url='https://github.com/KingoftheNight/irap',
+    url='https://github.com/KingoftheNight/RPCT-package',
     author='liangyc',
     author_email='1694822092@qq.com',
     license='BSD 2-Clause',
-    packages=['irap'],
+    packages=['pyrpct'],
     install_requires=[
         'numpy',
         'matplotlib',
         'scikit-learn',
-        'seaborn==0.10.1',
+        'seaborn',
         'pyecharts'
         ],
     entry_points={
         'console_scripts': [
-        'irap=irap.__main__:rpct_main',
+        'pyrpct=pyrpct.__main__:rpct_main',
             ]
         },
     python_requires=">=3.6",
