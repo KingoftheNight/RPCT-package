@@ -1,5 +1,5 @@
 from setuptools import setup
-from irap.__init__ import __version__
+from pyrpct.__init__ import __version__
 
 setup(name='pyrpct',
     version=__version__,
