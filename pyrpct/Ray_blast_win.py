@@ -6,7 +6,7 @@ import os
 from Visual import visual_longcommand_raywindows
 now_path = os.getcwd()
 fuction_path = os.path.dirname(__file__)
-psiblast_path = os.path.join(os.path.join(fuction_path, 'bin'), 'psiblast.exe')
+# psiblast_path = os.path.join(os.path.join(fuction_path, 'bin'), 'psiblast.exe')
 
 
 commands = sys.argv[1]
@@ -27,7 +27,7 @@ start = time.time()
 @ray.remote
 def blast(file, database_path, out):
     if out not in os.listdir(os.path.split(out)[0]):
-        command = visual_longcommand_raywindows(psiblast_path, file, database_path, out)
+        command = visual_longcommand_raywindows('psiblast', file, database_path, out)
         subprocess.Popen(command, shell=True).communicate()
 
 

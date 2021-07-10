@@ -47,7 +47,7 @@ def messagebox_help_precaution():
     help_precaution_mg.geometry('1300x300')
     help_precaution_mg.iconbitmap(os.path.join(os.path.join(file_path, 'bin'), 'Logo.ico'))
     #display box
-    precaution = Function_win.read_precaution()
+    precaution = Read.read_precaution()
     mhp = tk.Text(help_precaution_mg)
     mhp.pack(fill="both")
     mhp.insert('end',precaution)
@@ -322,7 +322,7 @@ def messagebox_makedb():
         m_o = e_m_o.get()
         if len(m_f) != 0 and len(m_o) != 0:
             print('\n>>>Making database...\n')
-            Function_win.read_madb(m_f, m_o)
+            Blast.blast_makedb_linux(m_f, m_o)
             v_command = 'makedb\t' + m_f + ' -o ' + m_o
             v_command = same_len(v_command)
             var.set(v_command)
@@ -668,7 +668,7 @@ def gui_blast():
     b_ev = e_b_ev.get()
     if len(b_f) != 0 and len(b_o) != 0 and len(b_db) != 0 and len(b_n) != 0 and len(b_ev) != 0:
         print('\n>>>Blasting PSSM matrix...\n')
-        Blast.blast_psiblast_windows(b_f, b_db, b_n, b_ev, b_o, now_path)
+        Blast.blast_psiblast_linux(b_f, b_db, b_n, b_ev, b_o, now_path)
         v_command = 'blast\t' + b_f + ' -db ' + b_db + ' -n ' + b_n + ' -ev ' + b_ev + ' -o ' + b_o
         v_command = same_len(v_command)
         var.set(v_command)

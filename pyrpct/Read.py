@@ -278,6 +278,6 @@ def read_weblogo_main(file):
 
 
 def read_precaution():
-    with open(os.path.join(read_path, 'README'), 'r', encoding='UTF-8') as f:
+    with open(os.path.join(os.path.join(read_path, 'bin'), 'README'), 'r', encoding='UTF-8') as f:
         prec_data = f.read()
     return prec_data
