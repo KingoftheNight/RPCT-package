@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name="rpct",
+    name="pyrpct",
     version="1.0",
     author="Liang YC",
     author_email="1694822092@qq.com",
